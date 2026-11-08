@@ -1,3 +1,5 @@
+// Este hack es para darte modo desarrollador sin tener que poner el código.
+
 // Forma corta (copiar y pegar en la consola, tal como se explica en el README)
 dev=true;lobby();$('#dt').classList.add('on');$('#code').value=''
 
