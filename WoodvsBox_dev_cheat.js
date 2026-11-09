@@ -24,7 +24,7 @@ enabledev()
     gui.style.fontFamily = 'Arial, sans-serif';
     gui.innerHTML = `
         <h3>WoodvsBox Hacks</h3>
-        <button id="devMode">Modo Desarrollador</button><br><br>
+        <button id="devMode">Activar Modo Desarrollador</button><br><br>
         <button id="speedBoost">Speed Boost</button><br><br>
         <button id="characterChanger">Change Character</button><br><br>
         <input type="text" id="nameChanger" placeholder="Enter New Name"><br><br>
@@ -33,3 +33,8 @@ enabledev()
         <button id="applyAudioChange">Change Audio</button><br><br>
     `;
     document.body.appendChild(hacks_gui);
+
+    // Crear funciones de los hacks
+    function enabledev(){dev=true;lobby();$('#dt').classList.add('on');$('#code').value=''}
+    // Detectar los botones
+    document.getElementById('devMode').addEventListener('click', enabledev());
