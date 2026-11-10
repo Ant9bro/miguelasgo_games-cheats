@@ -3,14 +3,6 @@
 // Forma corta (copiar y pegar en la consola, tal como se explica en el README)
 dev=true;lobby();$('#dt').classList.add('on');$('#code').value=''
 
-
-// Forma larga abajo (ignorar si eres un usuario normal)
-
-// Crear la función para poder ejecutarlo más fácil
-function enabledev(){dev=true;lobby();$('#dt').classList.add('on');$('#code').value=''}
-// Ejecutar la función
-enabledev()
-
 // Forma con interfaz gráfica (en pruebas)
     const hacks_gui = document.createElement('div');
     hacks_gui.style.position = 'fixed';
@@ -30,7 +22,8 @@ enabledev()
         <input type="text" id="coinsValue" placeholder="Monedas por añadir"><br><br>
         <button onclick="coinschange()" id="applyCoinsChange">Cambiar monedas</button><br><br>
         <input type="text" id="coinsNumber" placeholder="Monedas para cambiar"><br><br>
-        <!-- <button id="boton123">Boton</button><br><br> -->
+        <button onclick="setammo()" id="addAmmo">Cambiar munición</button><br><br>
+        <input type="text" id="ammoNumber" placeholder="Munición para cambiar"><br><br>
     `;
     document.body.appendChild(hacks_gui);
 
@@ -43,3 +36,7 @@ enabledev()
     function coinschange(){
         const coinsNumber = document.getElementById('coinsNumber').value
         D.coins=coinsNumber;save();chk()}
+    function setammo(){
+        const ammoNumber = document.getElementById('ammoNumber').value
+        ammo=ammoNumber;save();chk()}
+    
