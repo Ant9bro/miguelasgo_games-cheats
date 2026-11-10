@@ -27,10 +27,10 @@ enabledev()
         <button onclick="enabledev()" id="devMode">Activar Modo Desarrollador</button><br><br>
         <button onclick="disabledev()" id="disableDevMode">Desactivar Modo Desarrollador</button><br><br>
         <button onclick="coinshack()" id="coinsHack">Dar Monedas</button><br><br>
-        <input type="text" id="coinsValue" placeholder="Monedas"><br><br>
-        <button id="applyNameChange">Change Name</button><br><br>
-        <input type="text" id="audioURL" placeholder="Enter YouTube Audio URL"><br><br>
-        <button id="applyAudioChange">Change Audio</button><br><br>
+        <input type="text" id="coinsValue" placeholder="Monedas por añadir"><br><br>
+        <button onclick="coinschange()" id="applyCoinsChange">Cambiar monedas</button><br><br>
+        <input type="text" id="coinsNumber" placeholder="Monedas para cambiar"><br><br>
+        <!-- <button id="boton123">Boton</button><br><br> -->
     `;
     document.body.appendChild(hacks_gui);
 
@@ -39,4 +39,7 @@ enabledev()
     function disabledev(){dev=false;lobby()}
     function coinshack(){
         const coinsValue = document.getElementById('coinsValue').value
-        D.coins+=coinsValue;save();chk()}
+        D.coins=Number(D.coins)+Number(coinsValue);save();chk()}
+    function coinschange(){
+        const coinsNumber = document.getElementById('coinsNumber').value
+        D.coins=coinsNumber;save();chk()}
