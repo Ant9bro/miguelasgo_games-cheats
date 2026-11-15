@@ -1,9 +1,7 @@
-// Este hack es para darte modo desarrollador sin tener que poner el código.
+// Este hack es para darte modo desarrollador, ganar las monedas que quieras e incluso darte la munición que quieras.
 
-// Forma corta (copiar y pegar en la consola, tal como se explica en el README)
-dev=true;lobby();$('#dt').classList.add('on');$('#code').value=''
+// Forma con interfaz gráfica (copiar TODO y pegar en la consola, tal como se explica en el README). (El Desactivar Modo Desarrollador no funciona bien)
 
-// Forma con interfaz gráfica (en pruebas)
     const hacks_gui = document.createElement('div');
     hacks_gui.style.position = 'fixed';
     hacks_gui.style.top = '10px';
@@ -27,9 +25,9 @@ dev=true;lobby();$('#dt').classList.add('on');$('#code').value=''
     `;
     document.body.appendChild(hacks_gui);
 
-    // Crear funciones de los hacks
-    function enabledev(){dev=true;lobby()}
-    function disabledev(){dev=false;lobby()}
+    // Crear funciones de los hacks (esto también hay que copiarlo junto con la interfaz gráfica, si no solo tendrás unos botones que no sirven para nada)
+    function enabledev(){dev=true;lobby();$('#dt').classList.add('on');$('#code').value=''}
+    function disabledev(){dev=false;lobby();$('#dt').classList.add('off');$('#code').value=''}
     function coinshack(){
         const coinsValue = document.getElementById('coinsValue').value
         D.coins=Number(D.coins)+Number(coinsValue);save();chk()}
