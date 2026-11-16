@@ -14,6 +14,7 @@
     hacks_gui.style.fontFamily = 'Arial, sans-serif';
     hacks_gui.innerHTML = `
         <h3>WoodvsBox Hacks</h3>
+        <h4>por <a href="https://github.com/Ant9bro">Ant9bro (GitHub)</a></h4>
         <button onclick="enabledev()" id="devMode">Activar Modo Desarrollador</button><br><br>
         <button onclick="disabledev()" id="disableDevMode">Desactivar Modo Desarrollador</button><br><br>
         <button onclick="coinshack()" id="coinsHack">Dar Monedas</button><br><br>
