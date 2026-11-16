@@ -12,15 +12,11 @@
     hacks_gui.style.fontFamily = 'Arial, sans-serif';
     hacks_gui.innerHTML = `
         <h3>BlackHole Hacks</h3>
-        <h4>por Ant9bro (GitHub)</h4>
-        <button onclick="enabledev()" id="devMode">Activar Modo Desarrollador</button><br><br>
-        <button onclick="disabledev()" id="disableDevMode">Desactivar Modo Desarrollador</button><br><br>
+        <h4>por <a href="https://github.com/Ant9bro">Ant9bro (GitHub)</a></h4>
         <button onclick="materiahack()" id="coinsHack">Dar Materia</button><br><br>
         <input type="text" id="materiaValue" placeholder="Materia por añadir"><br><br>
         <button onclick="materiachange()" id="applyCoinsChange">Cambiar materia</button><br><br>
         <input type="text" id="materiaNumber" placeholder="Materia para cambiar"><br><br>
-        <button onclick="setammo()" id="addAmmo">Cambiar munición</button><br><br>
-        <input type="text" id="abcNumber" placeholder="Munición para cambiar"><br><br>
     `;
     document.body.appendChild(hacks_gui);
 
